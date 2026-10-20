@@ -1,0 +1,41 @@
+   Compiling amm v0.1.0 (/Users/vkit/Projects/mine/solana/amm/programs/amm)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.46s
+     Running unittests src/lib.rs (target/debug/deps/amm-31868b0fad08aaf7)
+
+running 5 tests
+test math::tests::mul_div_rounding ... ok
+test math::tests::quote_matches_readme_example ... ok
+test math::tests::quote_overflow_is_none ... ok
+test math::tests::quote_without_fees_is_plain_xy_k ... ok
+test math::tests::k_never_decreases ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/test_amm.rs (target/debug/deps/test_amm-a846afe689b26512)
+
+running 16 tests
+test initialize_accepts_existing_treasury_atas ... ok
+test initialize_stores_config_and_creates_accounts ... ok
+test pool_without_authority_cannot_be_locked ... ok
+test deposit_first_sets_price_then_follows_ratio ... ok
+test lock_rejects_non_authority ... ok
+test swap_creates_missing_output_ata ... ok
+test deposit_rounds_cost_up ... ok
+test initialize_rejects_fees_at_or_above_100_percent ... ok
+test deposit_rejects_slippage_zero_and_empty_first_side ... ok
+test lock_blocks_pool_ops_until_unlocked ... ok
+test swap_y_for_x_pays_treasury_and_matches_curve ... ok
+test swap_x_for_y_pays_treasury_and_matches_curve ... ok
+test withdraw_is_proportional_and_drains_cleanly ... ok
+test withdraw_rejects_slippage_zero_and_overdraw ... ok
+test swap_rejects_slippage_zero_and_empty_pool ... ok
+test swap_k_never_decreases ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.26s
+
+   Doc-tests amm
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
