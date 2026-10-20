@@ -1,37 +1,56 @@
+WARNING: `anchor-lang` version(1.2.0) and the current CLI version(1.2.1) don't match.
+
+	This can lead to unwanted behavior. To use the same CLI version, add:
+
+	[toolchain]
+	anchor_version = "1.2.0"
+
+	to Anchor.toml
+
+    Finished `release` profile [optimized] target(s) in 0.26s
    Compiling amm v0.1.0 (/Users/vkit/Projects/mine/solana/amm/programs/amm)
-    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.46s
-     Running unittests src/lib.rs (target/debug/deps/amm-31868b0fad08aaf7)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.67s
+     Running unittests src/lib.rs (/Users/vkit/Projects/mine/solana/amm/target/debug/deps/amm-1a6f01885f1d7a13)
+     Running tests/test_amm.rs (/Users/vkit/Projects/mine/solana/amm/target/debug/deps/test_amm-241d9ac020c0d98e)
+
+Found a 'test' script in the Anchor.toml. Running it as a test suite!
+
+Running test suite: "/Users/vkit/Projects/mine/solana/amm/Anchor.toml"
+
+   Compiling amm v0.1.0 (/Users/vkit/Projects/mine/solana/amm/programs/amm)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.41s
+     Running unittests src/lib.rs (target/debug/deps/amm-07ec7a19cc9a232f)
 
 running 5 tests
-test math::tests::mul_div_rounding ... ok
-test math::tests::quote_matches_readme_example ... ok
 test math::tests::quote_overflow_is_none ... ok
+test math::tests::quote_matches_readme_example ... ok
 test math::tests::quote_without_fees_is_plain_xy_k ... ok
+test math::tests::mul_div_rounding ... ok
 test math::tests::k_never_decreases ... ok
 
 test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
 
-     Running tests/test_amm.rs (target/debug/deps/test_amm-a846afe689b26512)
+     Running tests/test_amm.rs (target/debug/deps/test_amm-6872ce4caeac073b)
 
 running 16 tests
+test pool_without_authority_cannot_be_locked ... ok
 test initialize_accepts_existing_treasury_atas ... ok
 test initialize_stores_config_and_creates_accounts ... ok
-test pool_without_authority_cannot_be_locked ... ok
-test deposit_first_sets_price_then_follows_ratio ... ok
 test lock_rejects_non_authority ... ok
-test swap_creates_missing_output_ata ... ok
+test deposit_first_sets_price_then_follows_ratio ... ok
 test deposit_rounds_cost_up ... ok
-test initialize_rejects_fees_at_or_above_100_percent ... ok
+test swap_creates_missing_output_ata ... ok
 test deposit_rejects_slippage_zero_and_empty_first_side ... ok
 test lock_blocks_pool_ops_until_unlocked ... ok
-test swap_y_for_x_pays_treasury_and_matches_curve ... ok
-test swap_x_for_y_pays_treasury_and_matches_curve ... ok
-test withdraw_is_proportional_and_drains_cleanly ... ok
-test withdraw_rejects_slippage_zero_and_overdraw ... ok
-test swap_rejects_slippage_zero_and_empty_pool ... ok
+test initialize_rejects_fees_at_or_above_100_percent ... ok
 test swap_k_never_decreases ... ok
+test swap_x_for_y_pays_treasury_and_matches_curve ... ok
+test swap_rejects_slippage_zero_and_empty_pool ... ok
+test withdraw_is_proportional_and_drains_cleanly ... ok
+test swap_y_for_x_pays_treasury_and_matches_curve ... ok
+test withdraw_rejects_slippage_zero_and_overdraw ... ok
 
-test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.26s
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.20s
 
    Doc-tests amm
 

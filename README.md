@@ -105,16 +105,16 @@ fee settings.
 
 ## Build and test
 
-Requires Anchor CLI 1.2.x and Rust 1.89 (pinned in `rust-toolchain.toml`).
+Requires Anchor CLI 1.2.x and Rust 1.97 (pinned in `rust-toolchain.toml`).
 
 ```sh
-anchor build --arch v0
-cargo test
+anchor test
 ```
 
-Anchor 1.2 builds SBPF v3 by default. LiteSVM 0.10, which the tests run on,
-cannot load a v3 program (`add_program` returns `InvalidAccountData`), so build
-with `--arch v0` (or `v1`).
+`anchor test` builds the program (SBPF v3, Anchor's default) and runs
+`cargo test`, as set in `Anchor.toml`. The tests use LiteSVM 0.16, which
+loads v3 programs; LiteSVM 0.10 fails `add_program` on them with
+`InvalidAccountData`.
 
 The integration tests in `programs/amm/tests/test_amm.rs` load
 `target/deploy/amm.so` into LiteSVM and cover every instruction: happy paths
